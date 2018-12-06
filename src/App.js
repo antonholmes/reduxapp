@@ -3,15 +3,16 @@ import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-import { Footer } from './components/common';
+import { Header, Footer } from './components/common';
 import LibraryList from './components/LibraryList';
 
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
       <View style={{ flex: 1 }}>
-        <Footer footerText="Asset" />
+        <Header />
         <LibraryList />
+        <Footer footerText="Asset" />
       </View>
     </Provider>
   );
